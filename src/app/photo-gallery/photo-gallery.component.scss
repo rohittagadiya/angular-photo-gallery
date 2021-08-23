@@ -1,0 +1,243 @@
+.main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.sb-cat-vid-ic {
+    height: 18px;
+    width: 18px;
+    box-shadow: 0px 1px 1px #000;
+    border-radius: 20px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.search-main-container {
+    /* height: calc(100vh - 110px);
+    width: 100%;
+    position: relative; */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-close-button {
+    outline: none;
+    background-color: transparent;
+    padding: 0px;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.custom-padding {
+    padding-top: 20px;
+}
+
+.close-btn-icon {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.close-btn-icon-path {
+    transition: 0.5s;
+}
+
+.dialog-close-button:hover .close-btn-icon-path {
+    fill: #dededeb3 !important;
+}
+
+.card-container {
+    /* height: calc(100% - 135px);
+    overflow: auto;
+    padding: 0 40px;
+    position: absolute;
+    top: 165px;
+    width: 100%;
+    bottom: 0;
+    max-height: calc(100% - 135px); */
+    overflow: auto;
+    padding: 0 40px;
+    width: 100%;
+    bottom: 0;
+    margin-top: 15px !important;
+}
+
+.card-container::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+    background-color: transparent !important;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-columns {
+    column-count: 5;
+    column-gap: 30px;
+}
+
+.custom-design {
+    padding: 0px !important;
+    box-shadow: 0 0 6px #999;
+    /* margin-bottom: 30px !important; */
+    cursor: pointer;
+    overflow: hidden;
+    /* width: calc(20% - 20px); */
+    transition: 0.5s;
+}
+
+
+/* .custom-design img {
+    transition: 0.5s;
+  } */
+
+.custom-design img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.no-data-found-logo {
+    max-height: 150px;
+    margin: 15px;
+}
+
+.no-data-found-text {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto-regular';
+}
+
+.search-errr {
+    color: #fff;
+    margin: 0;
+    font-family: 'Roboto-Regular';
+    padding: 0px 30px;
+}
+
+
+/* loader */
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+}
+
+.lds-ellipsis.small-height {
+    height: 25px;
+}
+
+.lds-ellipsis.small-height div {
+    top: 8px !important;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgb(179, 20, 20);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis.dark div {
+    background-color: #4c99f9 !important;
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(19px, 0);
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .dialog-close-button {
+        top: 20px;
+        right: 20px;
+    }
+    .close-btn-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .card-columns {
+        column-count: 4;
+        column-gap: 20px;
+    }
+    .custom-design {
+        margin-bottom: 20px !important;
+    }
+}

@@ -1,0 +1,33 @@
+<div class="py-3 p-5 search-main-container">
+    <div class="main">
+
+        <!-- Another variation with a button -->
+        <div class="input-group">
+            <input type="text" [(ngModel)]="search_query" (keydown.enter)="searchPhoto()" class="form-control" placeholder="Search photos">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" (click)="searchPhoto()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row col no-gutters card-container position-relative" id="search-grid-wrapper" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="900" (scrolled)="photosScrolled()" [scrollWindow]="false">
+        <div class="col col-sm-12 masonry-container-wrap w-100 d-block text-center" id="search-grid" appPhotoGrid [columns]="7" [gutter]="25" [data]="allPhotosList" [itemClass]="'search-item'" [minColWidth]="150" [maxColWidth]="230" [doubleColumnWidth]="465">
+            <div class="custom-design" id="{{'masonry-item-'+i}}" *ngFor="let photo_details of allPhotosList; let i = index;" [style.background-color]="photo_details.avg_color">
+                <img class="search-item" [src]="photo_details.src.medium" alt="Card image" style="display: block">
+            </div>
+            <div class="pb-2 d-flex flex-wrap w-100" *ngIf="isLoading">
+                <div class="w-100 mrgn-top" style="margin-top: 20px;">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
