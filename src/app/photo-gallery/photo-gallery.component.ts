@@ -23,7 +23,7 @@ export class PhotoGalleryComponent implements OnInit {
     this.isLoading = true;
     this.httpService.searchPhotos(this.search_query, this.page_number).then(async (result: any) => {
       if (result && result.photos) {
-        result.photos.forEach(element => {
+        result.photos.map(element => {
           this.allPhotosList.push(element);
         });
         await this.detectChangeInArray(this.allPhotosList);
