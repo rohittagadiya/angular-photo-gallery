@@ -14,5 +14,18 @@ export class ViewPhotoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  async downloadPhoto() {
+    const image = await fetch(this.imageSRC)
+    const imageBlog = await image.blob()
+    const imageURL = URL.createObjectURL(imageBlog)
+    let element = document.createElement('a');
+    element.href = imageURL;
+    element.download = "filename.jpg";
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
 
 }
