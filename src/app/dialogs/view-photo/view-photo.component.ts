@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-view-photo',
@@ -10,7 +11,7 @@ export class ViewPhotoComponent implements OnInit {
 
   imageSRC: string = "";
 
-  constructor(public dialogRef: MatDialogRef<ViewPhotoComponent>) { }
+  constructor(public modalRef: NgbActiveModal) { }
 
   ngOnInit(): void {
   }

@@ -16,6 +16,7 @@
     <div class="row col no-gutters card-container position-relative" id="search-grid-wrapper" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="900" (scrolled)="photosScrolled()" [scrollWindow]="false">
         <div class="col col-sm-12 masonry-container-wrap w-100 d-block text-center" id="search-grid" appPhotoGrid [columns]="7" [gutter]="25" [data]="allPhotosList" [itemClass]="'search-item'" [minColWidth]="150" [maxColWidth]="230" [doubleColumnWidth]="465">
             <div class="custom-design" id="{{'masonry-item-'+i}}" *ngFor="let photo_details of allPhotosList; let i = index;" [style.background-color]="photo_details.avg_color">
+                <p>{{photo_details.photographer}}</p>
                 <img (click)="utilsService.viewImage(photo_details.src.large)" class="search-item" [src]="photo_details.src.medium" alt="Card image" style="display: block">
             </div>
             <div class="pb-2 d-flex flex-wrap w-100" *ngIf="isLoading">

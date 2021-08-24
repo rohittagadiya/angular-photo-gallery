@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../services/http.service';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-photo-gallery',
@@ -13,7 +14,7 @@ export class PhotoGalleryComponent implements OnInit {
   allPhotosList: any = [];
   isLoading: boolean = false;
 
-  constructor(public httpService: HttpService) { }
+  constructor(public httpService: HttpService, public utilsService: UtilsService) { }
 
   ngOnInit(): void {
     this.getPhotos();

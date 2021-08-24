@@ -113,6 +113,11 @@
     overflow: hidden;
     /* width: calc(20% - 20px); */
     transition: 0.5s;
+    p {
+        color: white;
+        margin: 6px 0;
+        font-weight: 500;
+    }
 }
 
 

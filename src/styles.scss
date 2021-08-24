@@ -2,7 +2,6 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
-
 .view-image-container {
     background: transparent !important;
 }
@@ -10,4 +9,14 @@
 .view-image-container .mat-dialog-container {
     background: transparent !important;
     box-shadow: none !important;
+}
+
+.view-photo-modal-class .modal-dialog {
+    width: fit-content;
+    .modal-content {
+        width: auto;
+        height: auto;
+        min-height: auto;
+        box-shadow: 0px 0px 100px 30px #c7dbef6e;
+    }
 }
